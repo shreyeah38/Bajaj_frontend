@@ -9,7 +9,7 @@ const App = () => {
     const handleSubmit = async () => {
         try {
             const parsedInput = JSON.parse(jsonInput);
-            const res = await axios.post('http://localhost:3000/bfhl', { ...parsedInput });
+            const res = await axios.post('https://bajaj-backend-2-gzy9.onrender.com/bfhl', { ...parsedInput });
             setResponse(res.data);
         } catch (error) {
             alert('Invalid JSON input or API error!');
